@@ -1,0 +1,154 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 23 14:39:06 2015
+
+@author: Sami
+"""
+
+import random 
+import time
+
+# Randomly generates the name of 1 of the US 50 states
+def RandomState(): 
+    statenum = random.randint(1,50)
+    if statenum == 1:
+       return "Alabama" 
+    if statenum == 2:   
+       return "Alaska"
+    if statenum == 3:   
+       return "Arizona"
+    if statenum == 4:   
+       return "Arkansas"
+    if statenum == 5: 
+       return "California"
+    if statenum == 6:   
+       return "Colorado"
+    if statenum == 7:   
+       return "Connecticut"
+    if statenum == 8:   
+       return "Delaware"
+    if statenum == 9:   
+       return "Florida"
+    if statenum == 10:   
+       return "Georgia"
+    if statenum == 11:   
+       return "Hawaii"
+    if statenum == 12:   
+       return "Idaho"
+    if statenum == 13:   
+       return "Illinois"
+    if statenum == 14:   
+       return "Indiana"
+    if statenum == 15:   
+       return "Iowa"
+    if statenum == 16:   
+       return "Kansas"
+    if statenum == 17:   
+       return "Kentucky"
+    if statenum == 18:   
+       return "Louisiana"
+    if statenum == 19:   
+       return "Maine"
+    if statenum == 20:   
+       return "Maryland"
+    if statenum == 21:   
+       return "Massachusetts"
+    if statenum == 22:   
+       return "Michigan"
+    if statenum == 23:   
+       return "Minnesota"
+    if statenum == 24:   
+       return "Mississippi"
+    if statenum == 25:   
+       return "Missouri"
+    if statenum == 26:   
+       return "Montana"
+    if statenum == 27:   
+       return "Nebraska"
+    if statenum == 28:   
+       return "Nevada"
+    if statenum == 29:   
+       return "New Hampshire"
+    if statenum == 30:   
+       return "New Jersey"
+    if statenum == 31:   
+       return "New Mexico"
+    if statenum == 32:   
+       return "New York"
+    if statenum == 33:   
+       return "North Carolina"
+    if statenum == 34:   
+       return "North Dakota"
+    if statenum == 35:   
+       return "Ohio"
+    if statenum == 36:   
+       return "Oklahoma"
+    if statenum == 37:   
+       return "Oregon"
+    if statenum == 38:   
+       return "Pennsylvania"
+    if statenum == 39:   
+       return "Rhode Island"
+    if statenum == 40:   
+       return "South Carolina"
+    if statenum == 41:    
+       return "South Dakota"
+    if statenum == 42:    
+       return "Tennessee"
+    if statenum == 43:    
+       return "Texas"
+    if statenum == 44:    
+       return "Utah"
+    if statenum == 45:    
+       return "Vermont"
+    if statenum == 46:    
+       return "Virginia"
+    if statenum == 47:    
+       return "Washington"
+    if statenum == 48:    
+       return "West Virginia"
+    if statenum == 49:    
+       return "Wisconsin"
+    if statenum == 50:    
+       return "Wyoming"
+
+# Randomly generate the title of 1 of my 5 favorite movies
+def RandomMovie(): 
+    movienum = random.randint(1,5)
+    if movienum == 1:
+       return "Inception"
+    if movienum == 2:
+       return "Interstellar"
+    if movienum == 3:
+       return "District 9"
+    if movienum == 4:
+       return "Star Wars: Episode III - Revenge of the Sith" 
+    if movienum == 5:
+       return "The Lion King"
+
+# Randomly Sleeps from 1-10s       
+def RandomSleep():
+    sleepnum = random.randint(1,10)
+    print("Sleeping for "+str(sleepnum)+"s")
+    time.sleep(sleepnum)
+
+
+#Main Thread 
+# randomly call RandomState() or RandomMovie() 
+# and then call RandomSleep() each time after either of the two functions
+#it repeats for 100 iterations
+count = 1
+while count <= 100:
+      randomcall = random.randint(1,2)
+      if randomcall == 1:
+         print(RandomState())
+         RandomSleep()
+         count = count + 1
+      if randomcall == 2:
+         print(RandomMovie())
+         RandomSleep()
+         count = count + 1
+         
+
+
+   
